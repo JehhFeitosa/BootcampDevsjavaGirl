@@ -6,15 +6,17 @@ public class Livro {
     private String nome;
     private String autor;
 
-    public Livro(String nome, String autor){
-        this.nome = nome;
+    public Livro(int codigo,String nome, String autor){
+    	this.codLivro = codigo;
+    	this.nome = nome;
         this.autor = autor;
 
     }
 
     public void imprimeLivro(){
-        System.out.println("Nome Livro:" + this.nome+
-                "\n autor: " + this.autor);
+        System.out.println("Código Livro:" + this.getCodLivro()+
+        		"\nNome Livro:" + this.getNome()+
+                "\nAutor: " + this.getAutor());
     }
 
 	public int getCodLivro() {

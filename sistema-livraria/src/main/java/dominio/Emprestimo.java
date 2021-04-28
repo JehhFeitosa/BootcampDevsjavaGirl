@@ -8,13 +8,31 @@ public class Emprestimo {
 	private String dataEmprestimo;
 	private String dataDevolucao;
 	
+	public Emprestimo(int codigo, Usuario usuario, Livro livro, String dataEmprestimo, String dataDevolucao) {
+        this.codigo = codigo;
+        this.usuario = usuario;
+        this.livro = livro;
+        this.dataEmprestimo = dataEmprestimo;
+        this.dataDevolucao = dataDevolucao;
+    }
+	
 	public void impreDadosEmprestimo() {
-		System.out.println("Codigo emprestimo" + codigo +
-		"\nNome usuario: " + usuario.getNomeCompleto() +
-		"\nnome do Livro: " + livro.getNome());
+		System.out.println("Codigo Empréstimo" + this.getCodigo() +
+		"\nNome Usuario: " + this.getUsuario().getNomeCompleto() +
+		"\nNome do Livro: " + this.getLivro().getNome()+
+		"\nData do Empréstimo: " + this.getDataEmprestimo()+
+		"\nData da Devolução: " + this.getDataDevolucao());
 	}
 	
 	
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
 
 	public Usuario getUsuario() {
 		return usuario;

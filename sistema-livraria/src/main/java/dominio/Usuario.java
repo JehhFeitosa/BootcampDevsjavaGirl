@@ -7,17 +7,29 @@ public class Usuario {
 	private String dataNascimento;
 	private String endereco;
 	
-	public Usuario() {
-		
+	
+	public Usuario(Long codigo, String nomeCompleto, String dataNascimento, String endereco) {
+		this.codigoUsuario = codigoUsuario;
+		this.nomeCompleto = nomeCompleto;
+		this.dataNascimento = dataNascimento;
+		this.endereco = endereco;
 	}
 	
 	public void imprimirDadosUsuario() {
-		System.out.println("Nome: " + this.nomeCompleto +
-				"\nData de nascimento: " + this.dataNascimento+
-				"\nEndereço: " + endereco);
+		System.out.println("Nome: " + this.getNomeCompleto() +
+				"\nData de nascimento: " + this.getDataNascimento()+
+				"\nEndereço: " + this.getEndereco());
 	}
 
 	
+
+	public int getCodigoUsuario() {
+		return codigoUsuario;
+	}
+
+	public void setCodigoUsuario(int codigoUsuario) {
+		this.codigoUsuario = codigoUsuario;
+	}
 
 	public String getNomeCompleto() {
 		return nomeCompleto;
@@ -43,8 +55,5 @@ public class Usuario {
 		this.endereco = endereco;
 	}
 
-
-	
-	
 
 }
