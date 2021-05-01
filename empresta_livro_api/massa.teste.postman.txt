@@ -1,0 +1,30 @@
+http://localhost:8080/usuario
+
+{
+"nome": "Jeh",
+"dataNascimento": "06-10-2010",
+"endereco": "Primeiro de Maio"
+}
+
+http://localhost:8080/livro
+
+{
+"nome": "Java Efetivo",
+"autor": "Loiane Grooner"
+}
+
+http://localhost:8080/emprestimo
+
+{
+ "usuario": {
+
+	"codigoUsuario":1
+ },
+ "livro":{
+	"codigoLivro":3
+ },
+ "dataEmprestimo": "2021-01-01",
+ "dataDevolucao": "2021-02-12"
+
+}
+
